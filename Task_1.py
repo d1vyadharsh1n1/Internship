@@ -1,0 +1,12 @@
+def replace_func(filename,old_keyword,new_keyword):
+    file=open(filename,"r")
+    content=file.read()
+    file.close()
+    new_content=content.replace(old_keyword,new_keyword)
+    f=open(filename,"w")
+    f.write(new_content)
+    f.close()
+filename=input("Enter the file name:")
+old_keyword=input("Enter the keyword to replace:")
+new_keyword=input("Enter the new keyword:")
+replace_func(filename,old_keyword,new_keyword)
